@@ -24,6 +24,7 @@ public class Ciudad {
 		
 	}
 	//
+	//
 	public Integer getCodigo() {
 		return codigo;
 	}
