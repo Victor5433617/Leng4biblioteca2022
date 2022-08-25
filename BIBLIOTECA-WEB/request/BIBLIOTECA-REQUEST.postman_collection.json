@@ -1,0 +1,140 @@
+{
+	"info": {
+		"_postman_id": "ed55765e-415b-47a0-9026-0cd19367c754",
+		"name": "BIBLIOTECA-REQUEST",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22753744"
+	},
+	"item": [
+		{
+			"name": "autores.consultar",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/BIBLIOTECA-WEB/rest/autor/consultar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"BIBLIOTECA-WEB",
+						"rest",
+						"autor",
+						"consultar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "autores.consultar_por_nombre",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/BIBLIOTECA-WEB/rest/autor/consultar-por-nombre?nombre=Fernando",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"BIBLIOTECA-WEB",
+						"rest",
+						"autor",
+						"consultar-por-nombre"
+					],
+					"query": [
+						{
+							"key": "nombre",
+							"value": "Fernando"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "autores.eliminar",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/BIBLIOTECA-WEB/rest/autor/eliminar/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"BIBLIOTECA-WEB",
+						"rest",
+						"autor",
+						"eliminar",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "autores.incluir",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"codigo\":null,\r\n    \"nombre\": \"juana de lara\"\r\n\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8082/BIBLIOTECA-WEB/rest/autor/incluir",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"BIBLIOTECA-WEB",
+						"rest",
+						"autor",
+						"incluir"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "autores.actualizar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"codigo\": \"0\",\r\n    \"nombre\": \"aaaaaaa\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/BIBLIOTECA-WEB/rest/autor/actualizar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"BIBLIOTECA-WEB",
+						"rest",
+						"autor",
+						"actualizar"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
