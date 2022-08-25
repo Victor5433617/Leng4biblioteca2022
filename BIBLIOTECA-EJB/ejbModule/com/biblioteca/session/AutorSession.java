@@ -52,6 +52,7 @@ public class AutorSession {
 	//Insertar un autor en la base de datos
 	//Utilizando Entity Manager
 	public Autor incluir (Autor autor) {
+		autor.setCodigo(null);
 		em.persist(autor);  // insertar 
 		em.refresh(autor); //consulta de dato insertado
 		return autor;
@@ -63,13 +64,13 @@ public class AutorSession {
 	}
 	
 	//Incluye o edita un autor dependiento si existe o no.
-	private Autor Actualizar (Autor autor) {
+	public Autor Actualizar (Autor autor) {
 		Autor autorActualizado = null;
 		Autor autorBuscar = buscarporCodigo(autor.getCodigo());
 		if (autorBuscar == null) {
-			incluir(autor);
+			autorActualizado = incluir(autor);
 		}else {
-			Editar(autor);
+			autorActualizado = Editar(autor);
 		}
 		return autorActualizado;
 

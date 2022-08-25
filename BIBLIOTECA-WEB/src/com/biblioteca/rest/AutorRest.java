@@ -45,6 +45,15 @@ public class AutorRest {
 		return as.incluir(autor);
 	}
 	
+	@POST
+	@Produces (MediaType.APPLICATION_JSON)
+	@Path("/actualizar")
+	public Autor actualizar(Autor autor) {
+		return as.Actualizar(autor);
+	}
+	
+	
+	
 	@DELETE
 	@Path("/eliminar/{id}")
 	public void eliminar(@PathParam ("id") Integer codigo) {
