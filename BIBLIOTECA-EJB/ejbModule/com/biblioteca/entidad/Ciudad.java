@@ -23,8 +23,7 @@ public class Ciudad {
 		super();
 		
 	}
-	//
-	//
+	
 	public Integer getCodigo() {
 		return codigo;
 	}
