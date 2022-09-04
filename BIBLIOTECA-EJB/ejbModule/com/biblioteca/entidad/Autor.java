@@ -6,6 +6,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 
@@ -21,6 +23,9 @@ public class Autor {
 	@Column (name= "aut_codigo")
 	private Integer codigo;
 	
+	@ManyToOne
+	@JoinColumn(name = "aut_ciudad")
+	private Ciudad ciudad;
 	
 	@Column (name= "aut_nombre")
 	private String nombre;
@@ -48,6 +53,12 @@ public class Autor {
 	}
 	public void setFoto(byte[] foto) {
 		this.foto = foto;
+	}
+	public Ciudad getCiudad() {
+		return ciudad;
+	}
+	public void setCiudad(Ciudad ciudad) {
+		this.ciudad = ciudad;
 	}
 	
 	
