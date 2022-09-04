@@ -29,6 +29,34 @@
 			"response": []
 		},
 		{
+			"name": "autores.buscar_por_codigo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/BIBLIOTECA-WEB/rest/autor/buscarPorcodigo?codigo=3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"BIBLIOTECA-WEB",
+						"rest",
+						"autor",
+						"buscarPorcodigo"
+					],
+					"query": [
+						{
+							"key": "codigo",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "autores.consultar_por_nombre",
 			"request": {
 				"method": "GET",
@@ -131,6 +159,37 @@
 						"rest",
 						"autor",
 						"actualizar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "autores.editar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"codigo\": \"0\",\r\n    \"nombre\": \"aaaaaaa\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/BIBLIOTECA-WEB/rest/autor/editar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"BIBLIOTECA-WEB",
+						"rest",
+						"autor",
+						"editar"
 					]
 				}
 			},
